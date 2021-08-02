@@ -1,9 +1,15 @@
 <?php
-    $host='localhost';
-    $db='hms';
-    $user='root';
-    $pass='';
+ //   $host='localhost';
+ //   $db='hms';
+ //   $user='root';
+ //   $pass='';
+ //   $charset='utf8mb4';
+    $host='remotemysql.com';
+    $db='aI0MeTlhGG';
+    $user='aI0MeTlhGG';
+    $pass='zCds0oM07a';
     $charset='utf8mb4';
+    
     $dsn="mysql:host=$host;dbname=$db;charset=$charset";
     try{
         $pdo=new PDO($dsn,$user,$pass);
