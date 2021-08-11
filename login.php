@@ -33,7 +33,7 @@
 
     <!-- Login Form -->
     <form action="<?php echo htmlentities($_SERVER['PHP_SELF'])?>" method="post">
-      <input type="text" id="username" class="fadeIn second" name="username" placeholder="login"  value="<?php if($_SERVER['REQUEST_METHOD']=='POST') echo$_POST['username']; ?>">
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username"  value="<?php if($_SERVER['REQUEST_METHOD']=='POST') echo$_POST['username']; ?>">
       <input type="password" id="password" class="fadeIn third" name="password"  placeholder="password">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
