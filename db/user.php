@@ -10,7 +10,9 @@ class user{
         try{
             $result=$this->getUserByUsername($username);
             if($result['num']>0)
-            {return false;}
+            {
+                return false;
+            }
             else{
                 $new_password=md5($password.$username);
                 $sql="INSERT INTO users (username,password) VALUES (:username,:password)";
@@ -35,13 +37,20 @@ class user{
     }
     public function getUser($username,$password)
     {
-        $sql = "select * from users where username=:username and password=:password";
+        try{
+            $sql = "select * from users where username=:username AND password=:password";
             $stmt=$this->db->prepare($sql);
             $stmt->bindparam(':username',$username);
-            $stmt->bindparam(':passwoord',$password);
+            $stmt->bindparam(':password',$password);
             $stmt->execute();
             $result=$stmt->fetch();
             return $result;
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+            return false;
+        }
     }
     public function getUserByUsername($username)
     {

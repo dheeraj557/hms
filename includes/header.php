@@ -12,7 +12,7 @@
     <title>Hospital Management System - <?php echo $title ?></title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
   <a class="navbar-brand" href="index.php">Sharma Hospitals</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -21,6 +21,14 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only"></span></a>
       <a class="nav-item nav-link" href="viewrecords.php">View Records</a>
+      <?php 
+        if(!isset($_SESSION['id'])){
+      ?>
+      <a class="nav-item nav-link align-right" href="login.php">Login <span class="sr-only"></span></a>
+      <?php } else{ ?>
+         <span> Hello,<?php echo $_SESSION['username']; ?> </span> 
+        <a class="nav-item nav-link align-right" href="logout.php">Logout <span class="sr-only"></span></a>
+        <?php } ?>
     </div>
   </div>
 </nav>
