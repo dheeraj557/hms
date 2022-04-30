@@ -16,8 +16,5 @@
 <?php echo 'Department-'.$result['department_name']; ?><br><br>
 <?php echo 'Email-id-'.$result['Email_Id']; ?><br><br>
 
-
-
-
 <br><br><br>
 <?php require_once'includes/footer.php'; ?> 

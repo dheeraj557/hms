@@ -1,9 +1,9 @@
 <?php
-//    $host='localhost';
-//    $db='hms';
-//    $user='root';
-//    $pass='';
-//    $charset='utf8mb4';
+/*    $host='localhost';
+    $db='hms';
+    $user='root';
+    $pass='';
+    $charset='utf8mb4'; */
     $host='remotemysql.com';
     $db='aI0MeTlhGG';
     $user='aI0MeTlhGG';
